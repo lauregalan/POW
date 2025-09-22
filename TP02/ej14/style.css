@@ -1,0 +1,308 @@
+.navbar{
+    padding: 14px 20px;
+    background-color: white;
+    margin: 0;
+    display: flex;
+    border-bottom: 2px solid #49cfae; 
+    gap: 20px; 
+    align-items: center;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+.upperbar{
+    background: #f2f2f2;
+    font-size: 0.9rem;
+    padding: 5px 20px;
+    display: flex;
+    color: #555;
+    justify-content: space-between;
+    margin: 0;
+    gap: 30px; 
+
+}
+
+.upperbar a{ 
+    font-family: Roboto;
+}
+
+.bar{ 
+    display: flex;
+}
+
+
+body {
+    margin: 0 ;
+    font-family: 'Roboto', sans-serif;
+    background: #fafafa;
+    color: #333;
+    
+}
+
+.img-cultu{
+    width:5%; 
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 40px; 
+
+}
+
+.navbar a{
+    color : #333;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: black; 
+}
+
+.nav-tabs {
+    margin-bottom: 0; /* elimina el espacio de Bootstrap */
+}
+
+.navbar a:hover{
+    background-color: rgba(255,255,255,0.1); /* efecto sutil */
+    border-radius: 4px;
+}
+
+
+
+.panel-noticia{
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+    margin: auto; 
+    flex: 3;   
+    padding:20px; 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    background-color: #fff; 
+    max-width: 1200px;
+}
+
+.panel-noticia:hover{
+      transform: scale(1.01);
+
+}
+
+.panel-turismo{
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+    margin: 0px; 
+    flex: 3;   
+    padding:20px; 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    background-color: #fff; 
+    max-width: 1200px;
+    max-height: 800px;
+}
+.imagen-noticia img{
+    
+    width: 100%; 
+    object-fit: cover;
+}
+
+.main_content {
+    margin: 0 100px; 
+  display: flex;        /* hace que panel-noticia y aside queden lado a lado */
+  flex-direction: row;
+  gap: 20px;            /* espacio entre columnas */
+  padding: 20px;
+}
+
+.main_content2 {
+margin: 0 100px; 
+  display: flex;        /* hace que panel-noticia y aside queden lado a lado */
+  flex-direction: column;
+  gap: 20px;            /* espacio entre columnas */
+  padding: 20px;
+}
+
+
+aside {
+  flex: 1;          
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+
+}
+
+aside:hover{
+          transform: scale(1.01);
+
+}
+
+aside img{
+    max-width: 100%;    
+}
+
+.fechas-partidos{
+    flex : 1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 250px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    transition: transform 0.2s ease; /* para que no sea tan chota la animacion (la hace mas suave)*/
+
+}
+
+.fechas-partidos:hover{
+  transform: scale(1.05); /* un 5 % mas grande de lo que estaba */
+
+}
+
+.contenedor-eq{
+    margin : 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.liga{
+    color: #999;
+
+}
+
+.linea-panel{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.info-partido{
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.equipo{
+    max-width: 100%;
+    
+}
+
+.equipo span{
+    font-weight: 500;
+}
+
+.equipo img {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.main_content2 h1{
+    text-align: center;
+}
+
+.texto-info{
+    font-size: 18px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+}
+
+.imagen-pico{
+    width: 100%;
+    height: auto;
+}
+
+.linea-turismo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*footer*/
+
+hr {
+  height: 2px;
+  background-color: #cdcdcd; /* color de la línea */
+  margin: 20px 0;          /* espacio arriba y abajo */
+  width: 80%;
+  align-self: center;
+  border-radius: 10px;
+  border: 0;
+}
+
+
+footer{
+        border-top: 2px solid #49cfae; 
+
+    display: flex; /*mas vale*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-solo{
+    width: 10rem;
+}
+
+.carruselPresentacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerText{
+    text-align: center;
+    color: #1d9f8a;
+    font-size: x-large;
+    align-content: center;
+}
+
+.carruselSocial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1%;
+}
+
+.imgCarrusel{
+    width: 2.5%;
+    height: 2.5%;
+    margin: 1%;
+}
+
+.imgLogos{
+    width: 10%;
+    height: 10%;
+    margin: 1%;
+}
+
+.carruselLogos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1%;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.referencia{
+    margin: 1rem;
+    color: #8f6989;
+}
+
+/* Paleta de colores */
+
+.color1 {color: #0e1e2c;}
+.color2 {color: #183e53;}
+.color3 {color: #216b84;}
+.color4 {color: #28a3be;}
+.color5 {color: #39e9fd;}
+.color6 {color: #e5feff;}

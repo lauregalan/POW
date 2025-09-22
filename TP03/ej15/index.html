@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./reset.css" />
+
+    <style>
+      .bg-custom-brown {
+        background-color: #fcf8f8;
+      }
+
+      .text-custom-blue {
+        color: #09f;
+      }
+    </style>
+  </head>
+  <body class="">
+    <div
+      class="container mx-auto bg-custom-brown p-4 rounded-4 mt-4 fw-light font-monospace border border-secondary"
+    >
+      <h1 class="fw-light text-custom-blue">Contacto</h1>
+      <article>
+        <p class="fw-bold">Comunícate con nuestro equipo!</p>
+
+        <ul>
+          <li>
+            <a
+              class="text-decoration-none text-black text-decoration-underline"
+              href="mailto:contacto@ejemplo.com"
+              >contacto@ejemplo.com</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-decoration-none text-black text-decoration-underline"
+              href="tel:+542302210818"
+              >+1 234 567 89</a
+            >
+          </li>
+        </ul>
+      </article>
+
+      <hr class="hr hr-blurry" />
+
+      <article class="mt-4">
+        <form>
+          <div class="row g-3 mb-3">
+            <div class="col-6 d-flex flex-column">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="col-6 d-flex flex-column">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex flex-column mb-3">
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <button class="btn btn-primary w-100" type="submit">
+                Enviar
+              </button>
+            </div>
+          </div>
+        </form>
+      </article>
+    </div>
+
+    <script>
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        setTimeout(() => {
+          window.location.href = "loading.html";
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.disposicion-h{
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* centra en el eje horizontal */
+}
+
+.disposicion-v{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-p img{
+    max-height: 250px; 
+    width: auto;
+    height: auto;     
+}
+.texto-info{
+    width: 250px;
+    height: 250px;
+    display: flex;              /* Añade esto */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+}
+
+body { 
+    font-family: 'Roboto', sans-serif;
+
+}
+body h2{ 
+    text-align: center;
+}
+
+body h3{
+    text-align: center;
+}
+
+.texto-programa{
+
+    text-align: center;
+}
+
+ul{
+    padding-left: 0;
+}

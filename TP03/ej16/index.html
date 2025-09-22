@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUIL</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./reset.css" />
+
+    <style>
+      .bg-custom-brown {
+        background-color: #fcf8f8;
+      }
+
+      .text-custom-blue {
+        color: #09f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-2">
+        <h1 class="text-center">Validar CUIL</h1>
+        <form
+          action="#"
+          class="col-4 mx-auto mt-4 d-flex flex-column justify-content-center"
+        >
+          <input
+            id="cuil"
+            type="text"
+            class="form-control"
+            placeholder="Ingrese su CUIL"
+          />
+          <button class="btn btn-primary mt-2">Validar</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const $form = document.querySelector("form");
+      const correctPrefixes = [20, 23, 24, 27, 30, 33, 34];
+
+      $form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const cuil = event.target.cuil.value.trim();
+
+        if (!cuil) {
+          alert("Por favor ingrese un CUIL");
+          return;
+        }
+
+        const regexVariantOne = /^\d{2}-\d{8}-\d$/;
+        const regexVariantTwo = /^\d{11}$/;
+
+        if (!regexVariantOne.test(cuil) && !regexVariantTwo.test(cuil)) {
+          alert("El formato del CUIL es incorrecto");
+          return;
+        }
+
+        const prefix = cuil.slice(0, 2);
+        const dni = cuil[2] === "-" ? cuil.slice(3, 11) : cuil.slice(2, 10);
+        const first10numbers = prefix + dni;
+        const suffix = parseInt(cuil[cuil.length - 1]);
+
+        if (!correctPrefixes.includes(parseInt(prefix))) {
+          alert("El prefijo del CUIL es inválido");
+          return;
+        }
+
+        const weights = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2];
+        let sum = 0;
+
+        weights.forEach((weight, index) => {
+          sum += parseInt(first10numbers[index]) * weight;
+        });
+
+        const rest = sum % 11;
+        const checkSuffix = 11 - rest;
+
+        console.log({ prefix, dni, suffix, checkSuffix });
+
+        if (checkSuffix !== suffix) {
+          alert("El sufijo es inválido");
+          return;
+        }
+
+        alert("El CUIL es válido");
+      });
+    </script>
+  </body>
+</html>

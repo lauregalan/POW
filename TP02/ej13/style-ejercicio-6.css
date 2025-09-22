@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #bbb; /* gris claro */
+}
+
+.borderless{
+    border: none;
+    background-color: transparent;
+    width: 14rem;
+    height: auto;
+    padding: 0;
+}
